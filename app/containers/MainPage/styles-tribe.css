@@ -1,0 +1,287 @@
+
+.round{
+  height: 12.638vw;
+  width: 12.638vw;
+  border-radius: 50%;
+}
+
+#TribePageWrapper .row{
+  min-height:3.1648vw
+}
+.TribePageParent{
+  background-image: url("image.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#TribePageWrapper{
+  width: 60%;
+  margin: 0 auto;
+}
+
+.select_btn {
+  min-height: 50px;
+}
+#app{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.button {
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  filter: drop-shadow(0.2rem 0.2rem 1rem rgba(0,0,0, 0.8));
+  cursor: pointer;
+}
+.scroll-wrapper {
+  width: 450px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+  border-radius: 6px;
+}
+.scroll-header {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid gray;
+  font-weight: bold;
+}
+
+.scroll-body {
+  overflow-y: auto;
+}
+.scroll-body-item {
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid gray;
+}
+
+.scroll-wrapper {
+  width: 450px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #fff;
+  border-radius: 6px;
+}
+.scroll-header {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid gray;
+  font-weight: bold;
+}
+
+.scroll-body {
+  overflow-y: auto;
+}
+.scroll-body-item {
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid gray;
+}
+.min button.button {
+  height: 12.638vw;
+  width: 12.638vw;
+  border-radius: 50%;
+}
+
+.min .five {
+  height: 12.638vw;
+  width: 12.638vw;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 6%;
+  left: 38%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.App__AppWrapper-sc-13edzow-0.dUNvSI {
+  width: 60%;
+  margin: 0 auto;
+}
+.form-group{
+  position: relative;
+}
+
+label{
+  position: absolute;
+  top: 15%;
+  left: 30%;
+}
+.one {
+  position: absolute;
+  left: 16%;
+  top: 6%;
+}
+.two{
+  position: absolute;
+  right: 25%;
+  top: 6%;
+}
+.three{
+  position: absolute;
+  left: 12%;
+  top: 40%;
+}
+.four {
+  position: absolute;
+  right: 15%;;
+  top: 34%;
+}
+
+.five{
+  position: absolute;
+  bottom: 12%;
+  right: 43%;
+}
+
+.min{
+  min-height: 42.0531vw;
+  position: relative;
+}
+.col-md-3.five {
+  text-align: center;
+}
+.select_btn{
+  position: relative;
+}
+
+.select_btn .btn{
+  border: dotted #fff;
+  border-radius: 43%;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+}
+.select_btn .back {
+  position: absolute;
+  height: 3.7234vw;
+  width:  6.3829vw;
+  left: 23%;
+  top: -145%;
+}
+.select_btn .final {
+  position: absolute;
+  height: 62px;
+  width: 190px;
+  left: 39%;
+  top: 15%;
+}
+.select_btn .next {
+  position: absolute;
+  height: 3.7234vw;
+  width:  6.3829vw;
+  right: 23%;
+  top: -145%;
+}
+.select_btn .return {
+  height: 60px;
+  width: 145px;
+
+}
+.finalList.row.float-right {
+  position: absolute;
+  top: 4%;
+  right: 3%;
+  width: 23.9361vw;
+}
+
+footer{
+  position: absolute;
+  bottom: -10%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: #fff;
+}
+
+.scroll-content{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 8px;
+}
+.select_btn .shareBtn {
+  position: absolute;
+  right: 0%;
+  bottom: 1%;
+  height: 60px;
+  width: 145px;
+}
+
+
+
+
+button.hover15 {
+  position: relative;
+}
+button.hover15::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  background: rgba(255,255,255,.2);
+  border-radius: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+button.hover15:hover::before {
+  -webkit-animation: circle .75s;
+  animation: circle .75s;
+}
+@-webkit-keyframes circle {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+  }
+}
+@keyframes circle {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+  }
+}
+.tribeForm{
+  background: #0000001c;
+  padding: 90px;
+  margin: 40px;
+  min-height: 400px;
+  border-radius: 50%;
+}

@@ -1,0 +1,513 @@
+{
+	"Friends": {
+		"Set1": {
+			"options": [
+				{
+					"name": "You don't stop searching for meaning",
+					"color": "red"
+				},
+				{
+					"name": "You keep it real",
+					"color": "blue"
+				},
+				{
+					"name": "You're very caring",
+					"color": "yellow"
+				},
+				{
+					"name": "You have a great sense of humour",
+					"color": "yellow"
+				}
+			]
+		},
+		"Set2": {
+			"options": [
+				{
+					"name": "You're very patient",
+					"color": "yellow"
+				},
+				{
+					"name": "You skate on slim possibilities",
+					"color": "blue"
+				},
+				{
+					"name": "You're strong enough to let it go",
+					"color": "red"
+				},
+				{
+					"name": "You're willing to be silly",
+					"color": "yellow"
+				}
+			]
+		},
+		"Set3": {
+			"options": [
+				{
+					"name": "You're strong",
+					"color": "red"
+				},
+				{
+					"name": "You care for someone we both love",
+					"color": "yellow"
+				},
+				{
+					"name": "Your anger is well chosen",
+					"color": "red"
+				},
+				{
+					"name": "You're understanding",
+					"color": "blue"
+				}
+			]
+		},
+		"Set4": {
+			"options": [
+				{
+					"name": "You're very kind",
+					"color": "yellow"
+				},
+				{
+					"name": "You're perceptive",
+					"color": "blue"
+				},
+				{
+					"name": "Ah sure the head on you",
+					"color": "blue"
+				},
+				{
+					"name": "You're intelligent",
+					"color": "blue"
+				}
+			]
+		},
+		"Set5": {
+			"options": [
+				{
+					"name": "...it's your first impression",
+					"color": "yellow"
+				},
+				{
+					"name": "...it's your strong first impression",
+					"color": "red"
+				},
+				{
+					"name": "it's your choices",
+					"color": "blue"
+				},
+				{
+					"name": "...it's your sense of style",
+					"color": "yellow"
+				}
+			]
+		}
+	},
+	"Family": {
+		"Set1": {
+			"options": [
+				{
+					"name": "You're not fair to yourself",
+					"color": "red"
+				},
+				{
+					"name": "If only you could see yourself through my eyes",
+					"color": "blue"
+				},
+				{
+					"name": "You've already done the hardest bit",
+					"color": "yellow"
+				},
+				{
+					"name": "You underestimate how much I respect you",
+					"color": "red"
+				}
+			]
+		},
+		"Set2": {
+			"options": [
+				{
+					"name": "You're good hearted",
+					"color": "yellow"
+				},
+				{
+					"name": "You're well-meaning",
+					"color": "yellow"
+				},
+				{
+					"name": "You accept being wrong faster than I do",
+					"color": "blue"
+				},
+				{
+					"name": "You never parade how clever you are",
+					"color": "blue"
+				}
+			]
+		},
+		"Set3": {
+			"options": [
+				{
+					"name": "You hate worthily",
+					"color": "red"
+				},
+				{
+					"name": "You standing up into the wind - oh!",
+					"color": "red"
+				},
+				{
+					"name": "With you, what you see is what you get",
+					"color": "yellow"
+				},
+				{
+					"name": "You hacking through the weeds up ahead",
+					"color": "red"
+				}
+			]
+		},
+		"Set4": {
+			"options": [
+				{
+					"name": "It's better when you're around",
+					"color": "yellow"
+				},
+				{
+					"name": "You've been more helpful than you realise",
+					"color": "yellow"
+				},
+				{
+					"name": "Thanks for forgetting so much",
+					"color": "red"
+				},
+				{
+					"name": "I was flattered that you thought I could help you",
+					"color": "blue"
+				}
+			]
+		},
+		"Set5": {
+			"options": [
+				{
+					"name": "I'd love you even if we weren't family",
+					"color": "yellow"
+				},
+				{
+					"name": "You can be proud of putting so much behind you",
+					"color": "red"
+				},
+				{
+					"name": "You're one of a kind",
+					"color": "blue"
+				},
+				{
+					"name": "Thanks again for that special advice",
+					"color": "yellow"
+				}
+			]
+		}
+	},
+		"Sweetheart": {
+		"Set1": {
+			"options": [
+				{
+					"name": "I like what gives you joy",
+					"color": "yellow"
+				},
+				{
+					"name": "I like how fully you are yourself",
+					"color": "red"
+				},
+				{
+					"name": "When you're boring it's still you being boring",
+					"color": "blue"
+				},
+				{
+					"name": "You're more fun than bursting bubble wrap",
+					"color": "yellow"
+				}
+			]
+		},
+		"Set2": {
+			"options": [
+				{
+					"name": "it's...passion",
+					"color": "red"
+				},
+				{
+					"name": "it's...being in the same tribe as you",
+					"color": "blue"
+				},
+				{
+					"name": "it's...your sense of adventure",
+					"color": "yellow"
+				},
+				{
+					"name": "it's...you failing doing something worth trying",
+					"color": "blue"
+				}
+			]
+		},
+		"Set3": {
+			"options": [
+				{
+					"name": "Your perspective is earned",
+					"color": "blue"
+				},
+				{
+					"name": "You're just as beautiful inside",
+					"color": "yellow"
+				},
+				{
+					"name": "There's also that time that's only ours",
+					"color": "yellow"
+				},
+				{
+					"name": "You've got it all going on",
+					"color": "red"
+				}
+			]
+		},
+		"Set4": {
+			"options": [
+				{
+					"name": "You're light with your success",
+					"color": "yellow"
+				},
+				{
+					"name": "You're at your best when you're most you",
+					"color": "blue"
+				},
+				{
+					"name": "You fight fear by embracing what some call danger",
+					"color": "red"
+				},
+				{
+					"name": "You're willing to reach as far as you can",
+					"color": "red"
+				}
+			]
+		},
+		"Set5": {
+			"options": [
+				{
+					"name": "You're just effin mighty",
+					"color": "red"
+				},
+				{
+					"name": "If only you knew how handsome you are",
+					"color": "yellow"
+				},
+				{
+					"name": "If only you knew how beautiful you really are",
+					"color": "yellow"
+				},
+				{
+					"name": "I'm glad about what our deal ignore",
+					"color": "blue"
+				}
+			]
+		}
+	},
+		"Others": {
+		"Set1": {
+			"options": [
+				{
+					"name": "I value your...loyalty",
+					"color": "blue"
+				},
+				{
+					"name": "I value your...hopefulness",
+					"color": "yellow"
+				},
+				{
+					"name": "I value your...determination",
+					"color": "red"
+				},
+				{
+					"name": "I value your...hospitality",
+					"color": "yellow"
+				}
+			]
+		},
+		"Set2": {
+			"options": [
+				{
+					"name": "You're striving for excellence",
+					"color": "red"
+				},
+				{
+					"name": "You're solution-focused",
+					"color": "red"
+				},
+				{
+					"name": "You're a team player",
+					"color": "blue"
+				},
+				{
+					"name": "You respond well to criticismg",
+					"color": "yellow"
+				}
+			]
+		},
+		"Set3": {
+			"options": [
+				{
+					"name": "You're very professional",
+					"color": "red"
+				},
+				{
+					"name": "You make considered suggestions",
+					"color": "blue"
+				},
+				{
+					"name": "Best F... every",
+					"color": "yellow"
+				},
+				{
+					"name": "You're able to think outside the box",
+					"color": "blue"
+				}
+			]
+		},
+		"Set4": {
+			"options": [
+				{
+					"name": "You get it",
+					"color": "blue"
+				},
+				{
+					"name": "You're terrible at lying",
+					"color": "blue"
+				},
+				{
+					"name": "You've got fabulous faults",
+					"color": "blue"
+				},
+				{
+					"name": "You're not one of the arrogant people",
+					"color": "red"
+				}
+			]
+		},
+		"Set5": {
+			"options": [
+				{
+					"name": "You're willing to speak up",
+					"color": "red"
+				},
+				{
+					"name": "You're willing to make unpopular decisions",
+					"color": "red"
+				},
+				{
+					"name": "You're a horseradish with mint sauce",
+					"color": "yellow"
+				},
+				{
+					"name": "You add warmth and good humour",
+					"color": "yellow"
+				}
+			]
+		}
+	}
+	,
+		"Also": {
+		"Set1": {
+			"options": [
+				{
+					"name": "You're a good judge",
+					"color": "red"
+				},
+				{
+					"name": "I can rely on your word",
+					"color": "yellow"
+				},
+				{
+					"name": "Thanks for the grub",
+					"color": "yellow"
+				},
+				{
+					"name": "Your face difficulties head-on",
+					"color": "yellow"
+				}
+			]
+		},
+		"Set2": {
+			"options": [
+				{
+					"name": "I wouldn't throw you out of bed for eating crisps",
+					"color": "yellow"
+				},
+				{
+					"name": "You don't hide your light",
+					"color": "red"
+				},
+				{
+					"name": "Your presence lingers",
+					"color": "blue"
+				},
+				{
+					"name": "You're patient with awkward people",
+					"color": "yellow"
+				}
+			]
+		},
+		"Set3": {
+			"options": [
+				{
+					"name": "Your understanding is as is",
+					"color": "blue"
+				},
+				{
+					"name": "You brush against the sublime",
+					"color": "yellow"
+				},
+				{
+					"name": "Your discernment glows",
+					"color": "red"
+				},
+				{
+					"name": "You remember your embarrassments",
+					"color": "blue"
+				}
+			]
+		},
+		"Set4": {
+			"options": [
+				{
+					"name": "You (most) not some of the time",
+					"color": "blue"
+				},
+				{
+					"name": "I like you",
+					"color": "yellow"
+				},
+				{
+					"name": "You're fierce clever you are",
+					"color": "red"
+				},
+				{
+					"name": "You're smart",
+					"color": "yellow"
+				}
+			]
+		},
+		"Set5": {
+			"options": [
+				{
+					"name": "You know how to be at peace",
+					"color": "blue"
+				},
+				{
+					"name": "You know how to build",
+					"color": "yellow"
+				},
+				{
+					"name": "You know the way to Amarillo",
+					"color": "yellow"
+				},
+				{
+					"name": "You know how to be wonderful",
+					"color": "yellow"
+				}
+			]
+		}
+	}
+}

@@ -8,9 +8,13 @@ import { defineMessages } from 'react-intl';
 export const scope = 'boilerplate.components.Footer';
 
 export default defineMessages({
-  licenseMessage: {
-    id: `${scope}.license.message`,
-    defaultMessage: 'This project is licensed under the MIT license.',
+  designedMessag: {
+    id: `${scope}.license.designedMessag`,
+    defaultMessage: 'The Colour Crystal Designed by AK Lee.',
+  },
+  developedBy: {
+    id: `${scope}.license.developedBy`,
+    defaultMessage: 'Developed by CJE Digital Marketing Agency.',
   },
   authorMessage: {
     id: `${scope}.author.message`,

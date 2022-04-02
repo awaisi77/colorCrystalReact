@@ -1,21 +1,20 @@
-
-.round{
+.round {
   height: 12.638vw;
   width: 12.638vw;
   border-radius: 50%;
 }
 
-#TribePageWrapper .row{
-  min-height:3.1648vw
+#TribePageWrapper .row {
+  min-height: 3.1648vw;
 }
-.TribePageParent{
-  background-image: url("image.jpg");
+.TribePageParent {
+  background-image: url('final-bg.gif');
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-#TribePageWrapper{
+#TribePageWrapper {
   width: 60%;
   margin: 0 auto;
 }
@@ -23,7 +22,7 @@
 .select_btn {
   min-height: 50px;
 }
-#app{
+#app {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -36,7 +35,7 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  filter: drop-shadow(0.2rem 0.2rem 1rem rgba(0,0,0, 0.8));
+  filter: drop-shadow(0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.8));
   cursor: pointer;
 }
 .scroll-wrapper {
@@ -113,11 +112,11 @@
   width: 60%;
   margin: 0 auto;
 }
-.form-group{
+.form-group {
   position: relative;
 }
 
-label{
+label {
   position: absolute;
   top: 15%;
   left: 30%;
@@ -127,40 +126,40 @@ label{
   left: 16%;
   top: 6%;
 }
-.two{
+.two {
   position: absolute;
   right: 25%;
   top: 6%;
 }
-.three{
+.three {
   position: absolute;
   left: 12%;
   top: 40%;
 }
 .four {
   position: absolute;
-  right: 15%;;
+  right: 15%;
   top: 34%;
 }
 
-.five{
+.five {
   position: absolute;
   bottom: 12%;
   right: 43%;
 }
 
-.min{
+.min {
   min-height: 42.0531vw;
   position: relative;
 }
 .col-md-3.five {
   text-align: center;
 }
-.select_btn{
+.select_btn {
   position: relative;
 }
 
-.select_btn .btn{
+.select_btn .btn {
   border: dotted #fff;
   border-radius: 43%;
   color: #fff;
@@ -170,7 +169,7 @@ label{
 .select_btn .back {
   position: absolute;
   height: 3.7234vw;
-  width:  6.3829vw;
+  width: 6.3829vw;
   left: 23%;
   top: -145%;
 }
@@ -184,14 +183,13 @@ label{
 .select_btn .next {
   position: absolute;
   height: 3.7234vw;
-  width:  6.3829vw;
+  width: 6.3829vw;
   right: 23%;
   top: -145%;
 }
 .select_btn .return {
   height: 60px;
   width: 145px;
-
 }
 .finalList.row.float-right {
   position: absolute;
@@ -200,7 +198,7 @@ label{
   width: 23.9361vw;
 }
 
-footer{
+footer {
   position: absolute;
   bottom: -10%;
   width: 100%;
@@ -210,7 +208,7 @@ footer{
   color: #fff;
 }
 
-.scroll-content{
+.scroll-content {
   width: 100%;
   height: 100%;
   display: flex;
@@ -227,9 +225,6 @@ footer{
   width: 145px;
 }
 
-
-
-
 button.hover15 {
   position: relative;
 }
@@ -242,15 +237,15 @@ button.hover15::before {
   content: '';
   width: 0;
   height: 0;
-  background: rgba(255,255,255,.2);
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 100%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   opacity: 0;
 }
 button.hover15:hover::before {
-  -webkit-animation: circle .75s;
-  animation: circle .75s;
+  -webkit-animation: circle 0.75s;
+  animation: circle 0.75s;
 }
 @-webkit-keyframes circle {
   0% {
@@ -278,7 +273,7 @@ button.hover15:hover::before {
     opacity: 0;
   }
 }
-.tribeForm{
+.tribeForm {
   background: #0000001c;
   padding: 90px;
   margin: 40px;

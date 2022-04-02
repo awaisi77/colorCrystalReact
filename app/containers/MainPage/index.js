@@ -2,7 +2,6 @@ import React from 'react';
 import './styles.css';
 import { mix_hexes } from '../../utils/ColorUtil';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import emailjs from 'emailjs-com';
 import { Button, Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
 import styled from 'styled-components';
 import html2canvas from 'html2canvas';
@@ -15,6 +14,13 @@ import {
 } from 'react-share';
 import Footer from '../../components/Footer/index';
 
+import {
+  FacebookIcon,
+  FacebookShareButton,
+  WhatsappIcon,
+  WhatsappShareButton,
+} from 'react-share';
+import Footer from '../../components/Footer/index';
 const AppWrapper = styled.div`
   max-width: calc(1180px + 16px * 2);
   margin: 0 auto;
@@ -1422,7 +1428,7 @@ class MainPage extends React.Component {
                   How to show yourself?
                 </ModalHeader>
                 <ModalBody>
-                  <h3>In a nutshell:</h3>
+
                   <ul>
                     <li>Choose the crystals which show what you’re like.</li>
                     <li>Select your final four and send.</li>

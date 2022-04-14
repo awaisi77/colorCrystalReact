@@ -5,7 +5,6 @@ import styled from 'styled-components';
 import Background from './final-bg.gif';
 import { Button, Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
 import Footer from '../../components/Footer/index';
-
 const AppWrapper = styled.div`
   max-width: calc(1180px + 16px * 2);
   margin: 0 auto;
@@ -178,7 +177,7 @@ class ColorMean extends React.Component {
           <div className="select_btn">
             <button
               className="btn return"
-              style={{ background: 'rgba(248, 249, 250, 0.7)',color:'black' }}
+              style={{ background: 'rgba(248, 249, 250, 0.7)', color: 'black' }}
               onClick={() => {
                 this.props.history.push('/main');
               }}
@@ -187,7 +186,10 @@ class ColorMean extends React.Component {
             </button>
             <button
               className="btn shareBtn"
-              style={{ background: 'rgba(248, 249, 250, 0.7)',color:'black' }}
+              style={{
+                background: 'rgba(248, 249, 250, 0.7)',
+                color: 'black',
+              }}
               onClick={() => {
                 this.props.history.push('/main/also');
               }}
@@ -198,10 +200,10 @@ class ColorMean extends React.Component {
               className="btn shareBtn"
               style={{
                 position: 'absolute',
-                background: 'rgba(248, 249, 250, 0.7)',color:'black',
+                background: 'rgba(248, 249, 250, 0.7)',
                 right: '-29%',
                 bottom: '-100%',
-
+                color: '#000',
                 fontWeight: 'bold',
                 height: '60px',
                 width: '145px',

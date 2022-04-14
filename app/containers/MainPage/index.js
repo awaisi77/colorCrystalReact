@@ -6,6 +6,13 @@ import { Button, Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
 import styled from 'styled-components';
 import html2canvas from 'html2canvas';
 import Confetti from 'react-confetti';
+import {
+  FacebookIcon,
+  FacebookShareButton,
+  WhatsappIcon,
+  WhatsappShareButton,
+} from 'react-share';
+import Footer from '../../components/Footer/index';
 
 import {
   FacebookIcon,
@@ -33,6 +40,7 @@ class MainPage extends React.Component {
       sendBtnVisibility: false,
       sendEmailModal: false,
       colorTribeModal: false,
+      faqsModal: false,
       showMakeFinalSelection: false,
       emailForm: {
         from: null,
@@ -46,416 +54,420 @@ class MainPage extends React.Component {
       option: null,
       makeFinalSelection: false,
       data: [
-        { name: 'Praise for Friends', color: '#f8f9fab3' },
-        { name: 'Praise for Family', color: '#f8f9fab3' },
-        { name: 'Praise for Others', color: '#f8f9fab3' },
-        { name: 'Praise for Sweetheart', color: '#f8f9fab3' },
+        { name: 'A bit Selfie', color: '#f8f9fab3' },
+        { name: 'A bit Serious', color: '#f8f9fab3' },
+        { name: 'A bit Sunny', color: '#f8f9fab3' },
+        { name: 'A bit Pushy', color: '#f8f9fab3' },
       ],
-      'Praise for Friends': {
+      'A bit Selfie': {
         Set1: {
           options: [
             {
-              "name":"It's your first impression",
-              "color":"#ffa500"
+              name: "In a fire I'd rescue essential oils",
+              color: '#ffa500',
             },
             {
-              "name":"It’s your style",
-              "color":"#ffa500"
+              name: "In a fire I'd rescue a hunky fireman",
+              color: '#a82222',
             },
             {
-              "name":"It\'s your strong first impression",
-              "color":"#a82222"
+              name: "In a fire I'd rescue my brand new shredder",
+              color: '#224aa8',
             },
             {
-              "name":"It\'s your choices",
-              "color":"#224aa8"
-            }
+              name: "In a fire I'd rescue a pet or maybe a small family member",
+              color: '#ffa500',
+            },
           ],
         },
         Set2: {
           options: [
             {
-              "name":"You're patient",
-              "color":"#ffa500"
+              name: "If I had to eat someone I'd start with boobs",
+              color: '#ffa500',
             },
             {
-              "name":"It's better when you're around",
-              "color":"#ffa500"
+              name: "If I had to eat someone I'd start with tongue",
+              color: '#224aa8',
             },
             {
-              "name":"Your anger is well chosen",
-              "color":"#a82222"
+              name: "If I had to eat someone I'd start with brains",
+              color: '#224aa8',
             },
             {
-              "name":"You're at your best when you're just being you",
-              "color":"#224aa8"
-            }
+              name: "If I had to eat someone I'd start with belly",
+              color: '#ffa500',
+            },
           ],
         },
         Set3: {
           options: [
             {
-              "name":"You're willing to be silly",
-              "color":"#ffa500"
+              name: "I've never seen a newt",
+              color: '#ffa500',
             },
             {
-              "name":"You're strong",
-              "color":"#a82222"
+              name: 'I don’t understand compound interest',
+              color: '#224aa8',
             },
             {
-              "name":"You're strong enough to let go",
-              "color":"#a82222"
+              name: "I've never felt patriotic",
+              color: '#224aa8',
             },
             {
-              "name":"You're understanding",
-              "color":"#224aa8"
-            }
+              name: "I've never licked a Finn",
+              color: '#224aa8',
+            },
           ],
         },
         Set4: {
           options: [
             {
-              "name":"You're light with your success",
-              "color":"#ffa500"
+              name: 'I rely on tomorrow',
+              color: '#ffa500',
             },
             {
-              "name":"You never parade how clever you are",
-              "color":"#224aa8"
+              name: 'I rely on that deeper connection',
+              color: '#224aa8',
             },
             {
-              "name":"You don't hide your light",
-              "color":"#224aa8"
+              name: 'I rely on invigorating worthwhile anger',
+              color: '#a82222',
             },
             {
-              "name":"You're not scared of nuance",
-              "color":"#224aa8"
-            }
+              name: 'I rely on the lottery',
+              color: '#224aa8',
+            },
           ],
         },
         Set5: {
           options: [
             {
-              "name":"You're kind and caring",
-              "color":"#ffa500"
+              name: 'If I had to commit a crime? Faking money',
+              color: '#ffa500',
             },
             {
-              "name":"I just like you, simple as that",
-              "color":"#ffa500"
+              name: 'If I had to commit a crime? Pouring paint on trains',
+              color: '#ffa500',
             },
             {
-              "name":"You have a great sense of humour",
-              "color":"#a82222"
+              name: 'If I had to commit a crime? Spying',
+              color: '#224aa8',
             },
             {
-              "name":"You keep it real",
-              "color":"#224aa8"
-            }
+              name:
+                'If I had to commit a crime? Sabotaging falconery with Parachuting rats',
+              color: '#ffa500',
+            },
           ],
         },
       },
-      'Praise for Family': {
+      'A bit Serious': {
         Set1: {
           options: [
             {
-              "name":"You're good-hearted",
-              "color":"#ffa500"
+              name: 'The revolution will come from the young',
+              color: '#a82222',
             },
             {
-              "name":"You're patient with awkward people",
-              "color":"#ffa500"
+              name: 'The revolution will come from religious extremists',
+              color: '#a82222',
             },
             {
-              "name":"You don't flinch from failing",
-              "color":"#a82222"
+              name: 'The revolution will come from organised crime',
+              color: '#a82222',
             },
             {
-              "name":"If only you could see yourself through my eyes",
-              "color":"#224aa8"
-            }
+              name:
+                'The revolution will come from the sufficiently down-to-earth',
+              color: '#a82222',
+            },
           ],
         },
         Set2: {
           options: [
             {
-              "name":"You've been more helpful than you realise",
-              "color":"#ffa500"
+              name: 'My peers are guilty of fearing facts',
+              color: '#224aa8',
             },
             {
-              "name":"I was flattered that you thought I could help",
-              "color":"#ffa500"
+              name: 'My peers are guilty of weaponising credit',
+              color: '#a82222',
             },
             {
-              "name":"You care for someone we both love",
-              "color":"#224aa8"
+              name: 'My peers are guilty of reviving slavery',
+              color: '#a82222',
             },
             {
-              "name":"Thanks for forgetting so much",
-              "color":"#224aa8"
-            }
+              name: 'My peers are guilty of diminishing doubt',
+              color: '#224aa8',
+            },
           ],
         },
         Set3: {
           options: [
             {
-              "name":"You're very very very very generous",
-              "color":"#ffa500"
+              name: 'My favourite myth is karma',
+              color: '#ffa500',
             },
             {
-              "name":"You standing up into the wind",
-              "color":"#a82222"
+              name: 'My favourite myth is completion',
+              color: '#ffa500',
             },
             {
-              "name":"You're happy to be wrong, sometimes",
-              "color":"#a82222"
+              name: 'My favourite myth is that that ache is wrongness',
+              color: '#ffa500',
             },
             {
-              "name":"With you,what you see is what you get",
-              "color":"#a82222"
-            }
+              name: 'My favourite myth is discovery',
+              color: '#ffa500',
+            },
           ],
         },
         Set4: {
           options: [
             {
-              "name":"You underestimate how much I respect you",
-              "color":"#ffa500"
+              name: 'Please please yourself',
+              color: '#ffa500',
             },
             {
-              "name":"You fit in so well with everyone",
-              "color":"#ffa500"
+              name: 'Please stop filming sideways',
+              color: '#a82222',
             },
             {
-              "name":"You're not fair to yourself",
-              "color":"#a82222"
+              name: 'Please less death, cruelty etc. if you wouldn’t mind',
+              color: '#ffa500',
             },
             {
-              "name":"We share fabulous faults",
-              "color":"#224aa8"
-            }
+              name: 'Please stop putting tribe before truth',
+              color: '#a82222',
+            },
           ],
         },
         Set5: {
           options: [
             {
-              "name":"I'd love you even if we weren't family",
-              "color":"#ffa500"
+              name: 'It’s simply the right thing to do',
+              color: '#a82222',
             },
             {
-              "name":"You've already done the hardest bit",
-              "color":"#a82222"
+              name: 'It’s just the way things are',
+              color: '#ffa500',
             },
             {
-              "name":"I can't thank you enough for all you've done",
-              "color":"#a82222"
+              name: 'You can think too much',
+              color: '#a82222',
             },
             {
-              "name":"You're one of a kind",
-              "color":"#224aa8"
-            }
+              name: 'What makes you so special then?',
+              color: '#224aa8',
+            },
           ],
         },
       },
-      'Praise for Sweetheart': {
+      'A bit Sunny': {
         Set1: {
           options: [
             {
-              "name":"I like what gives you joy",
-              "color":"#ffa500"
+              name: 'A word that makes me smile is ‘Wobbled’',
+              color: '#ffa500',
             },
             {
-              "name":"You're not one of the arrogant people",
-              "color":"#ffa500"
+              name: 'A word that makes me smile is ‘Shenanigans’',
+              color: '#ffa500',
             },
             {
-              "name":"You fight fear by embracing what some call danger",
-              "color":"#a82222"
+              name: 'A word that makes me smile is ‘Certainly’',
+              color: '#224aa8',
             },
             {
-              "name":"I'm glad about what we ignore",
-              "color":"#224aa8"
-            }
+              name: 'A word that makes me smile is ‘Grunties’',
+              color: '#ffa500',
+            },
           ],
         },
         Set2: {
           options: [
             {
-              "name":"You most (not some) of the time",
-              "color":"#ffa500"
+              name: '...parachuting grand canyon next thing a salesmen',
+              color: '#ffa500',
             },
             {
-              "name":"You're not scared of yourself",
-              "color":"#a82222"
+              name: '...parachuting grand canyon next thing a trampoline',
+              color: '#ffa500',
             },
             {
-              "name":"When you're boring it's still you being boring",
-              "color":"#224aa8"
+              name: '...parachuting grand canyon next thing customs',
+              color: '#a82222',
             },
             {
-              "name":"Your presence lingers",
-              "color":"#224aa8"
-            }
+              name: '...parachuting grand canyon next thing a mineshaft',
+              color: '#ffa500',
+            },
           ],
         },
         Set3: {
           options: [
             {
-              "name":"You're more fun than bursting bubble wrap",
-              "color":"#ffa500"
+              name: 'Viva music flare health bed',
+              color: '#ffa500',
             },
             {
-              "name":"I wouldn't throw you out of bed for eating crisps ",
-              "color":"#ffa500"
+              name: 'Viva touch light birds dance',
+              color: '#ffa500',
             },
             {
-              "name":"You're never petty",
-              "color":"#a82222"
+              name: 'Viva flowers cash beaches fear',
+              color: '#ffa500',
             },
             {
-              "name":"What you call your faults aren't faults",
-              "color":"#224aa8"
-            }
+              name: 'Viva clouds food forgiveness smile',
+              color: '#ffa500',
+            },
           ],
         },
         Set4: {
           options: [
             {
-              "name":"Always that time that's only ours'",
-              "color":"#ffa500"
+              name: 'Yee-Hay sucky-bunty nippolata-tweakie',
+              color: '#ffa500',
             },
             {
-              "name":"Best F. ever",
-              "color":"#a82222"
+              name: 'Hurrah cockee-licky biggie funbunz',
+              color: '#ffa500',
             },
             {
-              "name":"Your brain is just as beautiful",
-              "color":"#a82222"
+              name: 'Woo-hoo gloopy-gobby clutchy-plungers',
+              color: '#ffa500',
             },
             {
-              "name":"You don't try to change me",
-              "color":"#224aa8"
-            }
+              name: 'Yippee goose-bumpy titstreak bearsnouts',
+              color: '#ffa500',
+            },
           ],
         },
         Set5: {
           options: [
             {
-              "name":"If only you knew how handsome you are",
-              "color":"#ffa500"
+              name: 'Potholing? Nah',
+              color: '#a82222',
             },
             {
-              "name":"If only you knew how beautiful you really are",
-              "color":"#ffa500"
+              name: 'Waxing? Nah',
+              color: '#a82222',
             },
             {
-              "name":"You're just effing mighty",
-              "color":"#a82222"
+              name: 'Remembering? Nah',
+              color: '#224aa8',
             },
             {
-              "name":"I like how fully you are yourself",
-              "color":"#224aa8"
-            }
+              name: 'Whooping? Nah',
+              color: '#a82222',
+            },
           ],
         },
       },
-      'Praise for Others': {
+      'A bit Pushy': {
         Set1: {
           options: [
             {
-              "name":"You're a pleasure to work with",
-              "color":"#ffa500"
+              name: 'For an extra ten years, I would spend them offline',
+              color: '#ffa500',
             },
             {
-              "name":"You're professional",
-              "color":"#ffa500"
+              name: 'For an extra ten years, I would change my religion',
+              color: '#ffa500',
             },
             {
-              "name":"You never give up",
-              "color":"#a82222"
+              name:
+                'For an extra ten years, I would pretend to change my religion',
+              color: '#224aa8',
             },
             {
-              "name":"You're a team player",
-              "color":"#224aa8"
-            }
+              name:
+                'For an extra ten years, I would eat meat or stop eating meat',
+              color: '#ffa500',
+            },
           ],
         },
         Set2: {
           options: [
             {
-              "name":"You make considered suggestions",
-              "color":"#ffa500"
+              name: 'I’m a bit of a pain about something mystic',
+              color: '#a82222',
             },
             {
-              "name":"You're inspiring",
-              "color":"#a82222"
+              name: 'I’m a bit of a pain about un-inventing something',
+              color: '#a82222',
             },
             {
-              "name":"You're solution-focussed",
-              "color":"#a82222"
+              name: 'I’m a bit of a pain about some identity thing',
+              color: '#a82222',
             },
             {
-              "name":"You think outside the box",
-              "color":"#224aa8"
-            }
+              name: 'I’m a bit of a pain about some food thing',
+              color: '#a82222',
+            },
           ],
         },
         Set3: {
           options: [
             {
-              "name":"You have good judgement",
-              "color":"#ffa500"
+              name: 'Share the darkness with a bonfire',
+              color: '#ffa500',
             },
             {
-              "name":"You face difficulties head-on",
-              "color":"#a82222"
+              name: 'Share the darkness with defiant wishfulness',
+              color: '#a82222',
             },
             {
-              "name":"You pay attention to detail",
-              "color":"#224aa8"
+              name: 'Share the darkness despite knowing',
+              color: '#224aa8',
             },
             {
-              "name":"You watch the bottom line",
-              "color":"#224aa8"
-            }
+              name: 'Share the darkness even with that ache',
+              color: '#224aa8',
+            },
           ],
         },
         Set4: {
           options: [
             {
-              "name":"You respond well to criticism",
-              "color":"#ffa500"
+              name: 'Yes-Yes-Yes-Yes-YES Oh, like You wouldn’t believe',
+              color: '#ffa500',
             },
             {
-              "name":"You're willing to speak up",
-              "color":"#224aa8"
+              name: 'Yes? Yes. Why not?',
+              color: '#a82222',
             },
             {
-              "name":"You're willing to make unpopular decisions",
-              "color":"#224aa8"
+              name: 'Maybe, like literally',
+              color: '#224aa8',
             },
             {
-              "name":"Thanks for your discretion",
-              "color":"#224aa8"
-            }
+              name: 'No, just no, and let that be the end to it',
+              color: '#ffa500',
+            },
           ],
         },
         Set5: {
           options: [
             {
-              "name":"You add warmth and good humour",
-              "color":"#ffa500"
+              name: 'Meanwhile on Planet Soundless: Yodellers',
+              color: '#ffa500',
             },
             {
-              "name":"We can all rely on you",
-              "color":"#ffa500"
+              name: 'Meanwhile on Planet Soundless: Face Masks',
+              color: '#ffa500',
             },
             {
-              "name":"Your experience is hard-earned",
-              "color":"#a82222"
+              name: 'Meanwhile on Planet Soundless: Chinese Whispers',
+              color: '#ffa500',
             },
             {
-              "name":"You're striving for excellence",
-              "color":"#a82222"
-            }
+              name: 'Meanwhile on Planet Soundless: Ventriloquists',
+              color: '#ffa500',
+            },
           ],
         },
       },
@@ -470,11 +482,11 @@ class MainPage extends React.Component {
             color: 'rgba(248, 249, 250, 0.7)',
           },
           {
-            name: 'Compare yourself',
+            name: 'FAQs',
             color: 'rgba(248, 249, 250, 0.7)',
           },
           {
-            name: 'Show yourself',
+            name: 'How to find your colour crystal tribe',
             color: 'rgba(248, 249, 250, 0.7)',
           },
         ],
@@ -483,101 +495,121 @@ class MainPage extends React.Component {
         Set1: {
           options: [
             {
-              "name":"You still know how to play",
-              "color":"#ffa500"
+              name: 'The Triangle',
+              color: '#ffa500',
             },
             {
-              "name":"You remember being embarrassed",
-              "color":"#ffa500"
+              name: 'The Baton',
+              color: '#ffa500',
             },
             {
-              "name":"You've got music in you",
-              "color":"#ffa500"
+              name: 'The erase button',
+              color: '#224aa8',
             },
             {
-              "name":"You're able to listen",
-              "color":"#a82222"
-            }
+              name: "The Referee's Whistle",
+              color: '#a82222',
+            },
           ],
         },
         Set2: {
           options: [
             {
-              "name":"You're intelligent",
-              "color":"#ffa500"
+              name: "Hope's a flying boat",
+              color: '#ffa500',
             },
             {
-              "name":"Your discernment glows",
-              "color":"#ffa500"
+              name: "Hope's a rubber duckie",
+              color: '#ffa500',
             },
             {
-              "name":"You add in what you need to hope",
-              "color":"#a82222"
+              name: "Hope's a shipload of floation tanks",
+              color: '#224aa8',
             },
             {
-              "name":"You're perceptive",
-              "color":"#224aa8"
-            }
+              name: "Hope's Titanic's Iceberg",
+              color: '#a82222',
+            },
           ],
         },
         Set3: {
           options: [
             {
-              "name":"You brush against the sublime",
-              "color":"#ffa500"
+              name: "(at root doubt's heartbeat)",
+              color: '#224aa8',
             },
             {
-              "name":"You pay your share",
-              "color":"#a82222"
+              name: '(at root a shared common field)',
+              color: '#ffa500',
             },
             {
-              "name":"You challenge me to grow",
-              "color":"#224aa8"
+              name: '(at root the real here now)',
+              color: '#ffa500',
             },
             {
-              "name":"You skim on slim possibilities",
-              "color":"#224aa8"
-            }
+              name: '(at root only hovering colours)',
+              color: '#ffa500',
+            },
           ],
         },
         Set4: {
           options: [
             {
-              "name":"You have fun being serious",
-              "color":"#ffa500"
+              name: "At worst you'll be rightly adored next time",
+              color: '#ffa500',
             },
             {
-              "name":"You're terrible at lying",
-              "color":"#ffa500"
+              name: 'At worst there can still be great days',
+              color: '#a82222',
             },
             {
-              "name":"You don't deny your emotions",
-              "color":"#a82222"
+              name: "At worst many smart people are sure we'll all meet again",
+              color: '#224aa8',
             },
             {
-              "name":"You're unforgettable",
-              "color":"#224aa8"
-            }
+              name: 'At worst let them free you from your grief',
+              color: '#a82222',
+            },
           ],
         },
         Set5: {
           options: [
             {
-              "name":"You know how to be at peace",
-              "color":"#ffa500"
+              name: 'wearing flippers',
+              color: '#ffa500',
             },
             {
-              "name":"You know when to look away",
-              "color":"#ffa500"
+              name: 'in a hammock',
+              color: '#ffa500',
             },
             {
-              "name":"You know the way To Amarillo",
-              "color":"#ffa500"
+              name: 'in secure facilities',
+              color: '#ffa500',
             },
             {
-              "name":"Ah sure, the head on you",
-              "color":"#224aa8"
-            }
+              name: 'in oven gloves',
+              color: '#ffa500',
+            },
+          ],
+        },
+        Set6: {
+          options: [
+            {
+              name: 'They love by endless effing advice',
+              color: '#ffa500',
+            },
+            {
+              name: 'They love by using other words',
+              color: '#ffa500',
+            },
+            {
+              name: 'Without always liking, loving nevertheless',
+              color: '#ffa500',
+            },
+            {
+              name: 'They love by pretending to forget',
+              color: '#224aa8',
+            },
           ],
         },
       },
@@ -648,28 +680,58 @@ class MainPage extends React.Component {
   };
   backButtonHandler = e => {
     let { cat, subcat, data, option } = this.state;
-    if (subcat === 'Set5') {
-      this.setBackDataSet('Set4', option, cat);
-    } else if (subcat === 'Set4') {
-      this.setBackDataSet('Set3', option, cat);
-    } else if (subcat === 'Set3') {
-      this.setBackDataSet('Set2', option, cat);
-    } else if (subcat === 'Set2') {
-      this.setBackDataSet('Set1', option, cat);
+    if (cat === 'An extra section of ShowSelf') {
+      if (subcat === 'Set6') {
+        this.setBackDataSet('Set5', option, cat);
+      } else if (subcat === 'Set5') {
+        this.setBackDataSet('Set4', option, cat);
+      } else if (subcat === 'Set4') {
+        this.setBackDataSet('Set3', option, cat);
+      } else if (subcat === 'Set3') {
+        this.setBackDataSet('Set2', option, cat);
+      } else if (subcat === 'Set2') {
+        this.setBackDataSet('Set1', option, cat);
+      }
+    } else {
+      if (subcat === 'Set5') {
+        this.setBackDataSet('Set4', option, cat);
+      } else if (subcat === 'Set4') {
+        this.setBackDataSet('Set3', option, cat);
+      } else if (subcat === 'Set3') {
+        this.setBackDataSet('Set2', option, cat);
+      } else if (subcat === 'Set2') {
+        this.setBackDataSet('Set1', option, cat);
+      }
     }
   };
   nextButtonHandler = e => {
     let { cat, subcat, data, option } = this.state;
-    if (subcat === 'Set1') {
-      this.setNextSet('Set2', option, cat);
-    } else if (subcat === 'Set2') {
-      this.setNextSet('Set3', option, cat);
-    } else if (subcat === 'Set3') {
-      this.setNextSet('Set4', option, cat);
-    } else if (subcat === 'Set4') {
-      this.setNextSet('Set5', option, cat);
-    } else if (subcat === 'Set5') {
-      this.setNextSet('Set5', option, cat);
+    if (cat === 'An extra section of ShowSelf') {
+      if (subcat === 'Set1') {
+        this.setNextSet('Set2', option, cat);
+      } else if (subcat === 'Set2') {
+        this.setNextSet('Set3', option, cat);
+      } else if (subcat === 'Set3') {
+        this.setNextSet('Set4', option, cat);
+      } else if (subcat === 'Set4') {
+        this.setNextSet('Set5', option, cat);
+      } else if (subcat === 'Set5') {
+        this.setNextSet('Set6', option, cat);
+      } else if (subcat === 'Set6') {
+        this.setNextSet('Set6', option, cat);
+      }
+    } else {
+      if (subcat === 'Set1') {
+        this.setNextSet('Set2', option, cat);
+      } else if (subcat === 'Set2') {
+        this.setNextSet('Set3', option, cat);
+      } else if (subcat === 'Set3') {
+        this.setNextSet('Set4', option, cat);
+      } else if (subcat === 'Set4') {
+        this.setNextSet('Set5', option, cat);
+      } else if (subcat === 'Set5') {
+        this.setNextSet('Set5', option, cat);
+      }
     }
   };
   returnToHomeButtonHandler = e => {
@@ -678,10 +740,10 @@ class MainPage extends React.Component {
       subcat: 'none',
       option: null,
       data: [
-        { name: 'Praise for Friends', color: '#f8f9fab3' },
-        { name: 'Praise for Family', color: '#f8f9fab3' },
-        { name: 'Praise for Others', color: '#f8f9fab3' },
-        { name: 'Praise for Sweetheart', color: '#f8f9fab3' },
+        { name: 'A bit Selfie', color: '#f8f9fab3' },
+        { name: 'A bit Serious', color: '#f8f9fab3' },
+        { name: 'A bit Sunny', color: '#f8f9fab3' },
+        { name: 'A bit Pushy', color: '#f8f9fab3' },
       ],
       makeFinalSelection: false,
     });
@@ -725,8 +787,8 @@ class MainPage extends React.Component {
   captureImage = async () => {
     html2canvas(document.querySelector('#MainPageId')).then(async canvas => {
       setTimeout(() => {}, 10);
-      var base64URL = canvas.toDataURL('image/jpeg');
-      //  .replace('image/jpeg', 'image/octet-stream');
+      var base64URL = canvas.toDataURL('image/jpg');
+      //  .replace('image/jpg', 'image/octet-stream');
       console.log('base64URL', base64URL);
       let updatedBase64 = await this.resizeImage(base64URL);
       console.log('updatedBase64', updatedBase64);
@@ -744,6 +806,9 @@ class MainPage extends React.Component {
   toggleColorTribeModal = () => {
     this.setState({ colorTribeModal: !this.state.colorTribeModal });
   };
+  toggleFaqs = () => {
+    this.setState({ faqsModal: !this.state.faqsModal });
+  };
   handleSubmitSendMail = e => {
     console.log(e.target);
     e.preventDefault(); // Prevents default refresh by the browser
@@ -756,9 +821,18 @@ class MainPage extends React.Component {
     data.append('from_email', this.state.emailForm.from);
     data.append('to_email', this.state.emailForm.to);
     data.append('your_color', this.state.option.color);
+    /*  let data = {
+      from_name: this.state.emailForm.from_name,
+      base64_image: this.state.image,
+      to_name: this.state.emailForm.to_name,
+      from_email: this.state.emailForm.from,
+      to_email: this.state.emailForm.to,
+      your_color: this.state.option.color,
+    }; */
+
     var config = {
       method: 'post',
-      url: 'https://thecolorcrystal.com/api/post/game',
+      url: 'https://showself.thecolorcrystal.com/api/post/game',
       data: data,
     };
     axios(config)
@@ -768,7 +842,7 @@ class MainPage extends React.Component {
           url: response.data.url,
           shareButtons: true,
         });
-        alert('Your Colour Crystal has been sent');
+        alert('Your Colour Crystal has been sent.');
         /* this.setState({
                   cat: 'Main', subcat: 'none', sendEmailModal: false, sendBtnVisibility: false, option: null, data: [
                     { name: 'Friends', color: '#a82222' },
@@ -803,6 +877,7 @@ class MainPage extends React.Component {
 
   render() {
     let { data, cat, subcat } = this.state;
+
     return (
       <div className={'MainPageParent'} id={'MainPageId'}>
         <AppWrapper id={'MainPageWrapper'}>
@@ -873,22 +948,34 @@ class MainPage extends React.Component {
                               'An extra selection of Praise',
                             );
                           } else if (
-                            e.target.innerText === 'Show yourself' &&
+                            e.target.innerText ===
+                              'How to find your colour crystal tribe' &&
                             cat === 'Also'
                           ) {
-                            window.location.href =
-                              'http://showself.thecolourcrystal.com/';
+                            if (localStorage.getItem('finalColor') !== null) {
+                              this.props.history.push('/find-tribe');
+                            } else {
+                              alert('Please select your colour first.');
+                            }
                           } else if (
                             e.target.innerText === 'What do the colours mean?' &&
                             cat === 'Also'
                           ) {
                             this.props.history.push('/color-mean');
                           } else if (
-                            e.target.innerText === 'Compare yourself' &&
+                            e.target.innerText === 'FAQs' &&
                             cat === 'Also'
                           ) {
-                            window.location.href =
-                              'http://showself.thecolourcrystal.com/';
+                            this.toggleFaqs();
+                          } else if (
+                            e.target.innerText === 'The Color Crystal Live' &&
+                            cat === 'Also'
+                          ) {
+                            if (localStorage.getItem('tribe') !== null) {
+                              this.props.history.push('/live');
+                            } else {
+                              alert('Please select your tribe first.');
+                            }
                           } else {
                             let selectedOption = this.state[cat][
                               subcat
@@ -1033,7 +1120,10 @@ class MainPage extends React.Component {
             {this.state.cat === 'Main' ? (
               <button
                 className="btn back"
-                style={{ background: 'rgba(248, 249, 250, 0.7)',color:'black' }}
+                style={{
+                  background: 'rgba(248, 249, 250, 0.7)',
+                  color: 'black',
+                }}
                 onClick={this.onAlsoButtonClickHandler}
               >
                 Also
@@ -1047,7 +1137,10 @@ class MainPage extends React.Component {
             ) : (
               <button
                 className="btn back"
-                style={{ background: 'rgba(248, 249, 250, 0.7)',color:'black' }}
+                style={{
+                  background: 'rgba(248, 249, 250, 0.7)',
+                  color: 'black',
+                }}
                 onClick={this.backButtonHandler}
               >
                 Back
@@ -1056,7 +1149,10 @@ class MainPage extends React.Component {
             {this.state.cat !== 'Main' ? (
               <button
                 className="btn final"
-                style={{ background: 'rgba(248, 249, 250, 0.7)',color:'black' }}
+                style={{
+                  background: 'rgba(248, 249, 250, 0.7)',
+                  color: 'black',
+                }}
                 onClick={e => {
                   if (localStorage.getItem('selections') !== null) {
                     let selections = JSON.parse(
@@ -1084,10 +1180,10 @@ class MainPage extends React.Component {
                         selectionList: arrayUniqueByKey,
                       });
                     } else {
-                      alert('Please choose at least four crystals first.');
+                      alert('Please choose at least four crystals first');
                     }
                   } else {
-                    alert('Please choose at least four crystals first.');
+                    alert('Please choose at least four crystals first');
                   }
                 }}
               >
@@ -1101,7 +1197,10 @@ class MainPage extends React.Component {
             ) : (
               <button
                 className="btn next"
-                style={{ background: 'rgba(248, 249, 250, 0.7)',color:'black' }}
+                style={{
+                  background: 'rgba(248, 249, 250, 0.7)',
+                  color: 'black',
+                }}
                 onClick={this.nextButtonHandler}
               >
                 Next
@@ -1110,7 +1209,10 @@ class MainPage extends React.Component {
             {this.state.cat !== 'Main' ? (
               <button
                 className="btn return"
-                style={{ background: 'rgba(248, 249, 250, 0.7)',color:'black' }}
+                style={{
+                  background: 'rgba(248, 249, 250, 0.7)',
+                  color: 'black',
+                }}
                 onClick={this.returnToHomeButtonHandler}
               >
                 Return to Home
@@ -1121,7 +1223,10 @@ class MainPage extends React.Component {
             {this.state.sendBtnVisibility ? (
               <button
                 className="btn shareBtn"
-                style={{ background: 'rgba(248, 249, 250, 0.7)',color:'black' }}
+                style={{
+                  background: 'rgba(248, 249, 250, 0.7)',
+                  color: 'black',
+                }}
                 onClick={this.toggleSendEmailModal}
               >
                 Share Result
@@ -1133,7 +1238,10 @@ class MainPage extends React.Component {
             this.state.sendBtnVisibility === false ? (
               <button
                 className="btn shareBtn"
-                style={{ background: 'rgba(248, 249, 250, 0.7)',color:'black' }}
+                style={{
+                  background: 'rgba(248, 249, 250, 0.7)',
+                  color: 'black',
+                }}
                 onClick={this.onAlsoButtonClickHandler}
               >
                 Also
@@ -1146,11 +1254,10 @@ class MainPage extends React.Component {
                 className="btn shareBtn"
                 style={{
                   position: 'absolute',
-                  background: 'rgba(248, 249, 250, 0.7)'
-                  ,color:'black',
+                  background: 'rgba(248, 249, 250, 0.7)',
                   right: '-29%',
                   bottom: '-100%',
-
+                  color: 'black',
                   fontWeight: 'bold',
                   height: '60px',
                   width: '145px',
@@ -1246,13 +1353,13 @@ class MainPage extends React.Component {
                               this.setState({ emailForm });
                               console.log('state', this.state);
                             }}
-                            placeholder="Friend Email"
+                            placeholder="Their Email"
                           />
                         </div>
                       </div>
                       <div className="col-3">
                         <label htmlFor="exampleInputEmail1">
-                          Your Result Color:
+                          A colour of you:
                         </label>
                       </div>
                       <div className="col-8">
@@ -1317,24 +1424,57 @@ class MainPage extends React.Component {
                 className="modal-lg"
               >
                 <ModalHeader toggle={this.toggleColorTribeModal}>
-                  How to praise?
+                  How to show yourself?
                 </ModalHeader>
                 <ModalBody>
 
                   <ul>
-                    <li>Choose as many crystals of praise as you wish.</li>
+                    <li>Choose the crystals which show what you’re like.</li>
                     <li>Select your final four and send.</li>
                     <li>
-                      There’s a second wing in ‘Also.’
+                      Click ‘How to find your colour crystal tribe’ to see where
+                      you stand.
                     </li>
                   </ul>
-
                 </ModalBody>
                 <ModalFooter>
                   <Button
                     color="secondary"
                     onClick={this.toggleColorTribeModal}
                   >
+                    Cancel
+                  </Button>
+                </ModalFooter>
+              </Modal>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-12">
+              <Modal
+                isOpen={this.state.faqsModal}
+                toggle={this.toggleFaqs}
+                className="modal-lg"
+              >
+                <ModalHeader toggle={this.toggleFaqs}>FAQs</ModalHeader>
+                <ModalBody>
+                  <ul>
+                    <li>Why Praise? Ach, really?</li>
+                    <li>Will they know it’s from me? Yes.</li>
+                    <li>
+                      Do I have to use both wings? No, you can just send praise.
+                    </li>
+                    <li>
+                      Why fill in the questionnaire? To see how close we are,
+                      how far apart
+                    </li>
+                    <li>
+                      Who’s behind it? A bunch of us in a tent in Galway, it was
+                      raining…
+                    </li>
+                  </ul>
+                </ModalBody>
+                <ModalFooter>
+                  <Button color="secondary" onClick={this.toggleFaqs}>
                     Cancel
                   </Button>
                 </ModalFooter>

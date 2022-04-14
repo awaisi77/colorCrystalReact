@@ -29,7 +29,8 @@ class LiveColor extends React.Component {
         '#548cc4',
         '#d4b8f5',
         '#f55fb7',
-        '#e8204f'],
+        '#e8204f',
+      ],
       formTribe: {
         family: { value: 'Oldest', color: '#a82222' },
         from: { value: 'Australia', color: '#e8cb61' },
@@ -59,7 +60,6 @@ class LiveColor extends React.Component {
   }
 
   componentDidMount() {
-
     if (localStorage.getItem('finalColor') !== null) {
       let finalColorObj = JSON.parse(localStorage.getItem('finalColor'));
       this.setState({ option: finalColorObj });
@@ -80,7 +80,7 @@ class LiveColor extends React.Component {
     }
   }
 
-  onAlsoButtonClickHandler = (e) => {
+  onAlsoButtonClickHandler = e => {
     e.preventDefault();
     let { cat, subcat, data } = this.state;
     let text = e.target.innerText;
@@ -88,7 +88,7 @@ class LiveColor extends React.Component {
     data = obj.options;
     this.setState({ cat: text, subcat: 'Set1', data: data });
   };
-  onButtonClickHandler = (e) => {
+  onButtonClickHandler = e => {
     e.preventDefault();
     let { cat, subcat, data } = this.state;
     let text = e.target.innerText;
@@ -97,7 +97,6 @@ class LiveColor extends React.Component {
       data = obj.Set1.options;
       this.setState({ cat: text, subcat: 'Set1', data: data });
     } else {
-
     }
   };
   setNextSet = (setNext, option, cat) => {
@@ -122,18 +121,27 @@ class LiveColor extends React.Component {
           console.log('uniqueSelection', uniqueSelection);
           let uniqueSelectionArray = Array.from(uniqueSelection);
           console.log('uniqueSelectionArray', uniqueSelection);
-          localStorage.setItem('selections', JSON.stringify(uniqueSelectionArray));
+          localStorage.setItem(
+            'selections',
+            JSON.stringify(uniqueSelectionArray),
+          );
         }
       }
     }
-    this.setState({ subcat: setNext, option: null, data: newSet, makeFinalSelection: false, selectionList: [] });
+    this.setState({
+      subcat: setNext,
+      option: null,
+      data: newSet,
+      makeFinalSelection: false,
+      selectionList: [],
+    });
   };
   setBackDataSet = (setBack, option, cat) => {
     let obj = this.state[cat];
     let newSet = obj[setBack].options;
     this.setState({ subcat: setBack, option: null, data: newSet });
   };
-  backButtonHandler = (e) => {
+  backButtonHandler = e => {
     let { cat, subcat, data, option } = this.state;
     if (subcat === 'Set5') {
       this.setBackDataSet('Set4', option, cat);
@@ -145,7 +153,7 @@ class LiveColor extends React.Component {
       this.setBackDataSet('Set1', option, cat);
     }
   };
-  nextButtonHandler = (e) => {
+  nextButtonHandler = e => {
     let { cat, subcat, data, option } = this.state;
     if (subcat === 'Set1') {
       this.setNextSet('Set2', option, cat);
@@ -159,20 +167,24 @@ class LiveColor extends React.Component {
       this.setNextSet('Set5', option, cat);
     }
   };
-  returnToHomeButtonHandler = (e) => {
+  returnToHomeButtonHandler = e => {
     this.setState({
-      cat: 'Main', subcat: 'none', option: null, data: [
+      cat: 'Main',
+      subcat: 'none',
+      option: null,
+      data: [
         { name: 'Friends', color: 'rgb(168 34 34 / 5%)' },
         { name: 'Family', color: 'rgb(168 34 34 / 5%)' },
         { name: 'Sweetheart', color: 'rgb(168 34 34 / 5%)' },
         { name: 'Others', color: 'rgb(168 34 34 / 5%)' },
-      ], makeFinalSelection: false,
+      ],
+      makeFinalSelection: false,
     });
   };
-  handleCloseSendEmailModal = (e) => {
+  handleCloseSendEmailModal = e => {
     this.setState({ sendEmailModal: false });
   };
-  handleShowSendEmailModal = (e) => {
+  handleShowSendEmailModal = e => {
     this.setState({ sendEmailModal: true });
   };
   toggleSendEmailModal = () => {
@@ -180,68 +192,102 @@ class LiveColor extends React.Component {
   };
 
   render() {
-    let { data, cat, subcat,formTribe } = this.state;
+    let { data, cat, subcat, formTribe } = this.state;
     return (
       <div className={'MainPageParent'}>
         <AppWrapper id={'MainPageWrapper'}>
-          <div className='min'>
-            <div className=''>
-              <div className='one'>
-                <button className='button hover15'
-                        style={{ background: formTribe.family.color, border: '4px dotted #fff' }}
-                >Average colour for {formTribe.family.value}
+          <div className="min">
+            <div className="">
+              <div className="one">
+                <button
+                  className="button hover15"
+                  style={{
+                    background: formTribe.family.color,
+                    border: '4px dotted #fff',
+                  }}
+                >
+                  Average colour for {formTribe.family.value}
                 </button>
               </div>
-              <div className='two'>
-                <button className='button hover15'
-                        style={{ background: formTribe.from.color, border: '4px dotted #fff' }}
-                >Average colour for {formTribe.from.value}
+              <div className="two">
+                <button
+                  className="button hover15"
+                  style={{
+                    background: formTribe.from.color,
+                    border: '4px dotted #fff',
+                  }}
+                >
+                  Average colour for {formTribe.from.value}
                 </button>
               </div>
-              <div className='three'
-              >
-                <button className='button hover15'
-                        style={{ background: formTribe.iam.color, border: '4px dotted #fff' }}
-                >Average colour for {formTribe.iam.value}
+              <div className="three">
+                <button
+                  className="button hover15"
+                  style={{
+                    background: formTribe.iam.color,
+                    border: '4px dotted #fff',
+                  }}
+                >
+                  Average colour for {formTribe.iam.value}
                 </button>
               </div>
-              <div className='four'
-              >
-                <button className='button hover15'
-                        style={{ background: formTribe.maybe.color, border: '4px dotted #fff' }}
-                >Average colour for {formTribe.maybe.value}
+              <div className="four">
+                <button
+                  className="button hover15"
+                  style={{
+                    background: formTribe.maybe.color,
+                    border: '4px dotted #fff',
+                  }}
+                >
+                  Average colour for {formTribe.maybe.value}
                 </button>
               </div>
             </div>
-            {this.state.option !== null ?
-              <div className='button five' style={{
-                border: '4px dotted #fff',
-                background: this.state.option.color,
-              }}>
+            {this.state.option !== null ? (
+              <div
+                className="button five"
+                style={{
+                  border: '4px dotted #fff',
+                  background: this.state.option.color,
+                }}
+              >
                 {this.state.option.name}
-              </div> : <div className='button five' style={{
-                border: '4px dotted #fff',
-                background: 'rgb(168 34 34 / 5%)',
-              }}>
-              </div>}
+              </div>
+            ) : (
+              <div
+                className="button five"
+                style={{
+                  border: '4px dotted #fff',
+                  background: 'rgb(168 34 34 / 5%)',
+                }}
+              />
+            )}
           </div>
-          <div className='select_btn'>
-            <button className='btn return' style={{ background: 'orange' }}
-                    onClick={() => {
-                      this.props.history.push('/main');
-                    }}>Return to
-              Home
+          <div className="select_btn">
+            <button
+              className="btn return"
+              style={{ background: 'rgb(168 34 34 / 5%)' }}
+              onClick={() => {
+                this.props.history.push('/main');
+              }}
+            >
+              Return to Home
             </button>
-            <button className='btn shareBtn' style={{ background: 'orange' }}
-                    onClick={() => {
-                      this.props.history.push('/main/also');
-                    }}>Also</button>
+            <button
+              className="btn shareBtn"
+              style={{ background: 'rgb(168 34 34 / 5%)' }}
+              onClick={() => {
+                this.props.history.push('/main/also');
+              }}
+            >
+              Also
+            </button>
           </div>
-          <div className='row'></div>
-          <div className='row'></div>
+          <div className="row" />
+          <div className="row" />
         </AppWrapper>
       </div>
-    )
-  };
+    );
+  }
 }
 export default LiveColor;

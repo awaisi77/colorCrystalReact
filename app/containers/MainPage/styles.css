@@ -1,11 +1,6 @@
 .select_btn {
   min-height: 50px;
 }
-.MainPageParent {
-  background-image: url('final-bg.gif');
-  background-position: center;
-  background-repeat: no-repeat;
-}
 #MainPageWrapper .row {
   min-height: 3.1648vw;
 }
@@ -24,7 +19,7 @@
 }
 .button {
   border: none;
-  color: white;
+  color: black;
   text-align: center;
   text-decoration: none;
   display: inline-block;

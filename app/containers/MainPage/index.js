@@ -471,7 +471,7 @@ class MainPage extends React.Component {
             color: 'rgba(248, 249, 250, 0.7)',
           },
           {
-            name: 'What do the colours the mean?',
+            name: 'What do the colours mean?',
             color: 'rgba(248, 249, 250, 0.7)',
           },
           {
@@ -951,8 +951,7 @@ class MainPage extends React.Component {
                               alert('Please select your colour first.');
                             }
                           } else if (
-                            e.target.innerText ===
-                              'What do the colours the mean?' &&
+                            e.target.innerText === 'What do the colours mean?' &&
                             cat === 'Also'
                           ) {
                             this.props.history.push('/color-mean');
@@ -1011,7 +1010,7 @@ class MainPage extends React.Component {
           <div className="finalList row float-right">
             {this.state.makeFinalSelection === true ? (
               <>
-                <h3 style={{ color: '#fff' }}>Select final four. </h3>
+                <h3 style={{ color: '#fff' }}>Please select final four. </h3>
                 <div className="scroll-wrapper">
                   <div className="scroll-body">
                     {this.state.selectionList.map(o => {

@@ -14,13 +14,6 @@ import {
 } from 'react-share';
 import Footer from '../../components/Footer/index';
 
-import {
-  FacebookIcon,
-  FacebookShareButton,
-  WhatsappIcon,
-  WhatsappShareButton,
-} from 'react-share';
-import Footer from '../../components/Footer/index';
 const AppWrapper = styled.div`
   max-width: calc(1180px + 16px * 2);
   margin: 0 auto;
@@ -474,7 +467,7 @@ class MainPage extends React.Component {
       Also: {
         options: [
           {
-            name: 'An extra section of ShowSelf',
+            name: 'An extra selection of ShowSelf',
             color: 'rgba(248, 249, 250, 0.7)',
           },
           {
@@ -491,7 +484,7 @@ class MainPage extends React.Component {
           },
         ],
       },
-      'An extra section of ShowSelf': {
+      'An extra selection of ShowSelf': {
         Set1: {
           options: [
             {
@@ -680,7 +673,7 @@ class MainPage extends React.Component {
   };
   backButtonHandler = e => {
     let { cat, subcat, data, option } = this.state;
-    if (cat === 'An extra section of ShowSelf') {
+    if (cat === 'An extra selection of ShowSelf') {
       if (subcat === 'Set6') {
         this.setBackDataSet('Set5', option, cat);
       } else if (subcat === 'Set5') {
@@ -706,7 +699,7 @@ class MainPage extends React.Component {
   };
   nextButtonHandler = e => {
     let { cat, subcat, data, option } = this.state;
-    if (cat === 'An extra section of ShowSelf') {
+    if (cat === 'An extra selection of ShowSelf') {
       if (subcat === 'Set1') {
         this.setNextSet('Set2', option, cat);
       } else if (subcat === 'Set2') {
@@ -932,20 +925,20 @@ class MainPage extends React.Component {
                           let { cat, subcat } = this.state;
                           if (
                             e.target.innerText ===
-                              'An extra section of ShowSelf' &&
+                              'An extra selection of ShowSelf' &&
                             cat === 'Also'
                           ) {
                             this.setState({
                               option: {
-                                name: 'An extra section of ShowSelf',
+                                name: 'An extra selection of ShowSelf',
                                 color: 'red',
                               },
-                              cat: 'An extra section of ShowSelf',
+                              cat: 'An extra selection of ShowSelf',
                             });
                             this.setNextSet(
                               'Set1',
                               { name: 'NA', color: 'white' },
-                              'An extra section of ShowSelf',
+                              'An extra selection of ShowSelf',
                             );
                           } else if (
                             e.target.innerText ===
@@ -1181,10 +1174,10 @@ class MainPage extends React.Component {
                         selectionList: arrayUniqueByKey,
                       });
                     } else {
-                      alert('Please choose at least four crystals first');
+                      alert('Please choose at least four crystals first.');
                     }
                   } else {
-                    alert('Please choose at least four crystals first');
+                    alert('Please choose at least four crystals first.');
                   }
                 }}
               >
@@ -1235,7 +1228,7 @@ class MainPage extends React.Component {
             ) : (
               ''
             )}
-            {this.state.cat === 'An extra section of ShowSelf' &&
+            {this.state.cat === 'An extra selection of ShowSelf' &&
             this.state.sendBtnVisibility === false ? (
               <button
                 className="btn shareBtn"
@@ -1428,10 +1421,9 @@ class MainPage extends React.Component {
                   How to show yourself?
                 </ModalHeader>
                 <ModalBody>
-
                   <ul>
                     <li>Choose the crystals which show what you’re like.</li>
-                    <li>Select your final four and send.</li>
+                    <li>Please select your final four and send.</li>
                     <li>
                       Click ‘How to find your colour crystal tribe’ to see where
                       you stand.

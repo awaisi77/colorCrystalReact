@@ -462,11 +462,11 @@ class MainPage extends React.Component {
       Also: {
         options: [
           {
-            name: 'An extra section of Praise',
+            name: 'An extra selection of Praise',
             color: 'rgba(248, 249, 250, 0.7)',
           },
           {
-            name: 'What do colours mean?',
+            name: 'What do the colours mean?',
             color: 'rgba(248, 249, 250, 0.7)',
           },
           {
@@ -479,7 +479,7 @@ class MainPage extends React.Component {
           },
         ],
       },
-      'An extra section of Praise': {
+      'An extra selection of Praise': {
         Set1: {
           options: [
             {
@@ -857,20 +857,20 @@ class MainPage extends React.Component {
                           let { cat, subcat } = this.state;
                           if (
                             e.target.innerText ===
-                              'An extra section of Praise' &&
+                              'An extra selection of Praise' &&
                             cat === 'Also'
                           ) {
                             this.setState({
                               option: {
-                                name: 'An extra section of Praise',
+                                name: 'An extra selection of Praise',
                                 color: 'red',
                               },
-                              cat: 'An extra section of Praise',
+                              cat: 'An extra selection of Praise',
                             });
                             this.setNextSet(
                               'Set1',
                               { name: 'NA', color: 'white' },
-                              'An extra section of Praise',
+                              'An extra selection of Praise',
                             );
                           } else if (
                             e.target.innerText === 'Show yourself' &&
@@ -879,7 +879,7 @@ class MainPage extends React.Component {
                             window.location.href =
                               'http://showself.thecolourcrystal.com/';
                           } else if (
-                            e.target.innerText === 'What do colours Mean?' &&
+                            e.target.innerText === 'What do the colours mean?' &&
                             cat === 'Also'
                           ) {
                             this.props.history.push('/color-mean');
@@ -930,7 +930,7 @@ class MainPage extends React.Component {
           <div className="finalList row float-right">
             {this.state.makeFinalSelection === true ? (
               <>
-                <h3 style={{ color: '#fff' }}>Select final four. </h3>
+                <h3 style={{ color: '#fff' }}>Please select final four. </h3>
                 <div className="scroll-wrapper">
                   <div className="scroll-body">
                     {this.state.selectionList.map(o => {
@@ -1129,7 +1129,7 @@ class MainPage extends React.Component {
             ) : (
               ''
             )}
-            {this.state.cat === 'An extra section of Praise' &&
+            {this.state.cat === 'An extra selection of Praise' &&
             this.state.sendBtnVisibility === false ? (
               <button
                 className="btn shareBtn"
